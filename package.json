@@ -1,0 +1,25 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume for Fanny",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YFanny-Play/resume.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "Fanny Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YFanny-Play/resume/issues"
+  },
+  "homepage": "https://github.com/YFanny-Play/resume#readme",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
