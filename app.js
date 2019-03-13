@@ -1,10 +1,17 @@
 const Koa = require('koa');
+const static = require('koa-static');
 const Router = require('koa-router');
 const Fs = require('fs');
-const Path = require('path');
+const path = require('path');
 
 const app = new Koa();
 const router = new Router();
+
+// 静态资源目录对于相对入口文件index.js的路径
+const staticPath = './static'
+app.use(static(
+    path.join(__dirname, staticPath)
+))
 
 // app.use(async ctx => {
 //     ctx.body = 'hello world';
@@ -12,7 +19,7 @@ const router = new Router();
 router.get('/', async (ctx, next) => {
     ctx.type = 'text/html';
     ctx.body = Fs.createReadStream(
-        Path.resolve(__dirname, './www/index.html')
+        path.resolve(__dirname, './www/index.html')
     );
 })
 
