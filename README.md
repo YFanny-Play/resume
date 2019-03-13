@@ -8,4 +8,5 @@ npm install koa
 npm install koa-router
 npm install koa-static
 npm install koa-mount
+npm install koa-view
 ```
