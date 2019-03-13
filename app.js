@@ -1,5 +1,6 @@
 const Koa = require('koa');
 const static = require('koa-static');
+const mount = require('koa-mount');
 const Router = require('koa-router');
 const Fs = require('fs');
 const path = require('path');
@@ -9,9 +10,9 @@ const router = new Router();
 
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = './static'
-app.use(static(
+app.use(mount('/static', static(
     path.join(__dirname, staticPath)
-))
+)))
 
 // app.use(async ctx => {
 //     ctx.body = 'hello world';
