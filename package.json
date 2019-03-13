@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/YFanny-Play/resume#readme",
   "dependencies": {
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0"
   }
 }
