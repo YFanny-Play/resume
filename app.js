@@ -20,12 +20,12 @@ app.use(view(__dirname + '/views'));
 //     ctx.body = 'hello world';
 // })
 router.get('/', async (ctx, next) => {
-  // ctx.type = 'text/html';
-  // ctx.body = Fs.createReadStream(
-  //     path.resolve(__dirname, './www/index.html')
-  // );
-  // 默认是html
-  await ctx.render('index');
+  ctx.type = 'text/html';
+  ctx.body = Fs.createReadStream(
+    path.resolve(__dirname, './views/index.html')
+  );
+  // 默认是html  此渲染更新html需要重启服务
+  // await ctx.render('index');
 })
 
 app.use(router.routes());
