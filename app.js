@@ -12,7 +12,7 @@ const router = new Router();
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = './static'
 app.use(mount('/static', static(
-    path.join(__dirname, staticPath)
+  path.join(__dirname, staticPath)
 )))
 
 app.use(view(__dirname + '/views'));
@@ -20,12 +20,12 @@ app.use(view(__dirname + '/views'));
 //     ctx.body = 'hello world';
 // })
 router.get('/', async (ctx, next) => {
-    // ctx.type = 'text/html';
-    // ctx.body = Fs.createReadStream(
-    //     path.resolve(__dirname, './www/index.html')
-    // );
-    // 默认是html
-    await ctx.render('index');
+  // ctx.type = 'text/html';
+  // ctx.body = Fs.createReadStream(
+  //     path.resolve(__dirname, './www/index.html')
+  // );
+  // 默认是html
+  await ctx.render('index');
 })
 
 app.use(router.routes());
