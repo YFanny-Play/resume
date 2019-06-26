@@ -1,4 +1,7 @@
-#test {
-    color: red;
-    color: lightblue;
+h1 {
+  margin-top: 50px;
+  text-align: center;
+  color: blueviolet;
+  font-family: cursive;
+  font-size: 35px;
 }
