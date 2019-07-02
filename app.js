@@ -23,13 +23,16 @@ app.use(view(__dirname + '/views'));
 // app.use(async ctx => {
 //     ctx.body = 'hello world';
 // })
-router.get('/', async (ctx, next) => {
+router.get('/home', async (ctx, next) => {
   ctx.type = 'text/html';
   ctx.body = fs.createReadStream(path.resolve(__dirname, './views/index.html'));
   // 默认是html  此渲染更新html需要重启服务
   // await ctx.render('index');
 });
-
+router.get('/login', async (ctx, next) => {
+  ctx.type = 'text/html';
+  ctx.body = fs.createReadStream(path.resolve(__dirname, './views/login.html'));
+});
 app.use(router.routes());
 app.use(router.allowedMethods());
 
